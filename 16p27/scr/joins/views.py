@@ -40,20 +40,14 @@ def share(request, ref_id):
 
 
 def home(request):
-	print request.META.get("REMOTE_ADDR")
-	print request.META.get("HTTP_X_FORWARDED_FOR")
-	#Using Regular django forms
-	#print request.POST["email"], request.POST["email_2"]
-	# form = EmailForm(request.POST or None)
-	# if form.is_valid():
-	# 	email = form.cleaned_data['email']
-	# 	new_join, created = Join.objects.get_or_create(email=email)
-	# 	print new_join, created
-	# 	print new_join.timestamp
-	# 	if created:
-	# 		print"This obj was created"
+	try:
+		join_id = request.session['join_id_ref']
+		obj = Join.objects.get(id=join_id)
+	except:
+		obj = None
 
-	#Using model forms
+	
+
 	form = JoinForm(request.POST or None)
 	if form.is_valid():
 		new_join = form.save(commit = False)
@@ -62,15 +56,19 @@ def home(request):
 		new_join_old, created = Join.objects.get_or_create(email=email)
 		if created:
 			new_join_old.ref_id = get_ref_id()
+			#add our friend who referred us
+			if not obj == None:
+				new_join_old.friend = obj
 			new_join_old.ip_address = get_ip(request)
 			new_join_old.save()
+		
+		#print all friends
+		print Join.objects.filter(friend=obj).count()
+		print obj.referral.all().count()
+
+
 		#redirect here
 		return HttpResponseRedirect("/%s" %(new_join_old.ref_id))
-
-		#new_join.ip_address = get_ip (request)
-		#new_join.save()
-
-
 
 	context  = {"form": form}
 	template = "home.html"
