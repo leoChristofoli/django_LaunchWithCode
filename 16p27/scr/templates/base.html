@@ -1,5 +1,8 @@
 
 <!DOCTYPE html>
+
+{% load staticfiles %}
+
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -12,11 +15,16 @@
 
     <title>Launch with Code</title>
 
-    <!-- Bootstrap core CSS -->
+    <!-- Bootstrap core CSS 
     <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+  -->
+   <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
-    <link href="http://getbootstrap.com/examples/jumbotron/jumbotron.css" rel="stylesheet">
+    <!-- Custom styles for this template 
+    <link href="http://getbootstrap.com/examples/jumbotron/jumbotron.css" rel="stylesheet">-->
+
+    <link href="{% static 'css/jumbotron.css' %}" rel="stylesheet">
 
 	<style>
 		body {
@@ -40,12 +48,17 @@
   <body>
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron" >
+    <div class="jumbotron">
       <div class="container">
-        <h1>Launch with Code</h1>
-        <p>Si tratta di un modello per una semplice vendita o un sito web informativo. Esso comprende un grande richiamo chiamato jumbotron e tre pezzi di supporto di contenuti. Usarlo come un punto di partenza per creare qualcosa di più unico.</p>
-        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
-      </div>
+        <div class='col-sm-6'>
+          <h1>Launch with Code</h1>
+          <p>Si tratta di un modello per una semplice vendita o un sito web informativo. Esso comprende un grande richiamo chiamato jumbotron e tre pezzi di supporto di contenuti. Usarlo come un punto di partenza per creare qualcosa di più unico.</p>
+          <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+        </div>
+        <div class='col-sm-6'>
+          <img src="{% static 'img/iphone.png' %}" class='img-responsive' />
+          </div>
+        </div>
     </div>
 
     <div class="container">
@@ -68,7 +81,7 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
   </body>
