@@ -73,8 +73,8 @@ def home(request):
 			new_join_old.save()
 		
 		#print all friends
-		print Join.objects.filter(friend=obj).count()
-		print obj.referral.all().count()
+		#print Join.objects.filter(friend=obj).count()
+		#print obj.referral.all().count()
 
 
 		#redirect here
