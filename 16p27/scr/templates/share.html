@@ -1,12 +1,43 @@
 {% extends "base.html" %}
-
+{% load staticfiles %}
 
 {% block content %}
+{% include "navbar.html" %}
 
-	{{ ref_id }} <br/>
+<!-- <nav class="navbar navbar-inverse" style='margin-bottom: 0px; border-radius: 0px'>
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand">Launch With Code</a>
+        </div>
+      </div>
+    </nav> -->
 
-	{{ count }}<br/>
+  <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+      <div class='row'>
+        <div class='col-md-6 pull-right'>
+          <h1>Hello, world!</h1>
+          <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+          <p><a class="btn btn-success btn-lg" role="button">Learn more &raquo;</a></p>
+        </div>
+        <div class='col-md-6 pull-left'>
+          <img src="{% static 'img/launch.jpg' %}" class='img-responsive img-rounded' />
+          </div>
+          </div>
+      </div>
+    </div>
 
-	{{ ref_url }}<br/>
 
+<div class='container'>
+
+
+{{ ref_id }} <br/>
+
+{{ count }}<br/>
+
+{{ ref_url }}<br/>
+
+
+</div>
 {% endblock %}

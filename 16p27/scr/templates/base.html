@@ -31,6 +31,10 @@
   				padding-top: 0px;
   				padding-bottom: 0px;
 			 }
+      .navbar {
+          margin-bottom: 0px !important;
+          border-radius: 0px !important;
+        }
 	</style>
 	
 
@@ -47,26 +51,16 @@
 
   <body>
 
-    <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">
-      <div class="container">
-        <div class='col-sm-6'>
-          <h1>Launch with Code</h1>
-          <p>Si tratta di un modello per una semplice vendita o un sito web informativo. Esso comprende un grande richiamo chiamato jumbotron e tre pezzi di supporto di contenuti. Usarlo come un punto di partenza per creare qualcosa di più unico.</p>
-          <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
-        </div>
-        <div class='col-sm-6'>
-          <img src="{% static 'img/iphone.png' %}" class='img-responsive' />
-          </div>
-        </div>
-    </div>
 
-    <div class="container">
+
+    
           
       {% block content %}
       
       {% endblock %}
 
+      
+<div class="container">
       <hr>
 
       <footer>
