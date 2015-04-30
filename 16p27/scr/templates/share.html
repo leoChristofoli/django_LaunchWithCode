@@ -86,12 +86,25 @@ if ($signUpCount == 0){
           <p>Share your unique link below via Email, Facebook, Twitter, Reddit, or LinkedIn to earn rewards from LaunchWithCode.com</p>
           <div class="well" style='background-color:white;'>{{ ref_url }}</div>
           Share<br/>
-            <i class="fa fa-facebook-official fa-4x" style="color:#3b5998"></i>
-            <i class="fa fa-twitter-square fa-4x" style="color:#4099FF"></i>
-            <i class="fa fa-linkedin-square fa-4x" style="color:#007bb6"></i>
-            <i class="fa fa-reddit-square fa-4x" style="color:#900020"></i>
-            <i class="fa fa-google-plus-square fa-4x" style="color:#D34836"></i>
-            <i class="fa fa-pinterest-square fa-4x" style="color:#C92228"></i>
+            <a href="https://www.facebook.com/sharer/sharer.php?u={{ ref_url }}" target="_blank">
+              <i class="fa fa-facebook-official fa-4x" style="color:#3b5998"></i>
+              </a>
+            <a href="https://twitter.com/home?status=I%27m%20going%20to%20%23learn%20to%20%23Code...%20Come%20build%20an%20%23webapp%20with%20me!%20%0A{{ ref_url }}" target="_blank">
+              <i class="fa fa-twitter-square fa-4x" style="color:#4099FF"></i>
+              </a>
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ ref_url }}&title=Be%20first%20%7C%20Join%20Swift%20for%20Entrepreneurs&summary=Swift%20for%20Entrepreneurs%20is%20a%20project-based%20programming%20course%20for%20non-technical%20founders.%20We'll%20learn%20how%20to%20build%20iOS%20apps%20from%20scratch%20using%20Apple's%20new%20programming%20language:%20Swift.%20Be%20first%20and%20learn%20with%20me!&source={{ ref_url }}" target="_blank">
+              <i class="fa fa-linkedin-square fa-4x" style="color:#007bb6"></i>
+              </a>
+            <a href="http://www.reddit.com/submit?url=http://swiftforentrepreneurs.com/&title=Unlock%20to%20Learn%20Swift%20for%20Free!%20By%20Swift%20for%20Entrepreneurs.%20Made%20for%20Non%20Techincals." target="_blank">
+              <i class="fa fa-reddit-square fa-4x" style="color:#900020"></i>
+              </a>
+            <a href='https://plus.google.com/share?url={{ ref_url }}' target="_blank">
+              <i class="fa fa-google-plus-square fa-4x" style="color:#D34836"></i>
+            </a>
+             <a href="https://www.pinterest.com/pin/create/button/
+        ?url={{ ref_url }}">
+              <i class="fa fa-pinterest-square fa-4x" style="color:#C92228"></i>
+              </a>
         </div>
         <div class='col-md-6 pull-left'>
           <img src="{% static 'img/launch.jpg' %}" class='img-responsive img-rounded' />
