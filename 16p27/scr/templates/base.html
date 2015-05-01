@@ -37,6 +37,9 @@
           border-radius: 0px !important;
         }
 	</style>
+      
+          {% block styles %}
+        {% endblock %}
 	
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
@@ -60,15 +63,13 @@
       
       {% endblock %}
 
-      
-<div class="container">
-      <hr>
-
+<div class="row" style="margin-top:80px; background-color:grey;">
+    <div class="container" style="text-align:center; padding:20px">
       <footer>
         <p>&copy; Company 2015</p>
       </footer>
     </div> <!-- /container -->
-      
+</div>
       
 
 

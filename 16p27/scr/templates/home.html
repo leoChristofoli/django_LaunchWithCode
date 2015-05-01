@@ -1,5 +1,26 @@
 {%extends "base.html"%}
 {% load staticfiles %}
+
+{% block styles %}
+
+  <style>
+      body {
+        border-top: 4px solid #333;
+        /*min-height: 5000px;*/
+        /*min-width: 5000px;*/
+        background: url('{% static "img/iphoneback.jpg" %}') no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: conver;
+        background-size: cover;
+        /*background-image: url('{% static "img/beach.jpg" %}');*/
+        /*background-image:url('https://lh4.googleusercontent.com/-FsgMNhfQLSg/AAAAAAAAAAI/AAAAAAAAaRY/3VnF3vSuWKk/photo.jpg');*/
+        /*background-repeat: repeat-x;*/
+      }
+    </style>
+
+{% endblock %}
+
 {%block content%}
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
@@ -18,7 +39,6 @@
 
 
 <div class= 'container' style='text-align:center';>
-<hr/>
 
 <h1>Join the Revolution</h1>
 
@@ -26,5 +46,11 @@
 	{{form.as_p}}
 	<input type='submit' value='Join' class='btn btn-success'/>
 </form>
+</div>
+
+<div class='row' style='text-align:center;background-color:white;margin: 80px 0px;min-height:200px;'>
+  <div class='col-sm-12'>
+  <h1>Hello</h1>
+  </div>
 </div>
 {%endblock%}
