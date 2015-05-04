@@ -17,6 +17,18 @@
         /*background-image:url('https://lh4.googleusercontent.com/-FsgMNhfQLSg/AAAAAAAAAAI/AAAAAAAAaRY/3VnF3vSuWKk/photo.jpg');*/
         /*background-repeat: repeat-x;*/
       }
+
+      .jumbotron h1 {
+        font-weight: 100;
+      }
+
+      .jumbotron p {
+        font-weight: 200;
+        font-size: 21px;
+      }
+
+
+
     </style>
 
 {% endblock %}
@@ -27,9 +39,9 @@
     <div class="jumbotron" style='background-color:white;'>
       <div class="container">
         <div class='col-sm-6'>
-          <h1>Launch with Code</h1>
-          <p>Si tratta di un modello per una semplice vendita o un sito web informativo. Esso comprende un grande richiamo chiamato jumbotron e tre pezzi di supporto di contenuti. Usarlo come un punto di partenza per creare qualcosa di più unico.</p>
-          <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+          <h1 >Launch with Code</h1>
+          <p>Usarlo come un punto di partenza per creare qualcosa di più unico.</p>
+          <p><a class="btn btn-default btn-lg btn-block" href="#signup" role="button">Be First &raquo;</a></p>
         </div>
         <div class='col-sm-6'>
           <img src="{% static 'img/iphone.png' %}" class='img-responsive' />
@@ -38,8 +50,9 @@
     </div>
 
 
-<div class= 'container' style='text-align:center';>
-     <h1 style="color: #FAFCFB">Join the Revolution</h1>
+<div class= 'container' style='text-align:center; color: #FAFCFB' id="signup";>
+     <i class="fa fa-key fa-5x"></i>
+     <h1 >Enjoy</h1>
     
     <div class="col-sm-6 col-sm-offset-3">
         <form class="horizontal"method="POST" action=""> {% csrf_token %}
@@ -57,13 +70,76 @@
             </span>
         </div>
             </div>
+        </form>
+          <p class="lead">Sign up here. <br/> Get First News on Content</p>
     </div>
-</form>
 </div>
 
-<div class='row' style='text-align:center;background-color:white;margin: 80px 0px;min-height:200px;'>
+<div class='row featured-row'>
   <div class='col-sm-12'>
-  <h1>Hello</h1>
+      <div class='col-sm-3'>
+      <i class="fa fa-upload fa-3x"></i>
+      <h2>Feature</h2>
+      <p class='lead'>
+      Some feature text goes here.
+      </p>
+    </div>
+    <div class='col-sm-3'>
+      <i class="fa fa-upload fa-3x"></i>
+      <h2>Feature</h2>
+      <p class='lead'>
+      Some feature text goes here.
+      </p>
+    </div>
+    <div class='col-sm-3'>
+      <i class="fa fa-upload fa-3x"></i>
+      <h2>Feature</h2>
+      <p class='lead'>
+      Some feature text goes here.
+      </p>
+    </div>
+    <div class='col-sm-3'>
+      <i class="fa fa-upload fa-3x"></i>
+      <h2>Feature</h2>
+      <p class='lead'>
+      Some feature text goes here.
+      </p>
+    </div>
+
+  </div>
+</div>
+
+<div class='row featured-row'>
+  <div class='col-sm-12'>
+    <div class='col-sm-3'>
+        <i class="fa fa-upload fa-3x"></i>
+        <h2>Feature</h2>
+        <p class='lead'>
+        Some feature text goes here.
+        </p>
+      </div>
+      <div class='col-sm-3'>
+        <i class="fa fa-upload fa-3x"></i>
+        <h2>Feature</h2>
+        <p class='lead'>
+        Some feature text goes here.
+        </p>
+      </div>
+      <div class='col-sm-3'>
+        <i class="fa fa-upload fa-3x"></i>
+        <h2>Feature</h2>
+        <p class='lead'>
+        Some feature text goes here.
+        </p>
+      </div>
+      <div class='col-sm-3'>
+        <i class="fa fa-upload fa-3x"></i>
+        <h2>Feature</h2>
+        <p class='lead'>
+        Some feature text goes here.
+        </p>
+      </div>
+  
   </div>
 </div>
 {%endblock%}
