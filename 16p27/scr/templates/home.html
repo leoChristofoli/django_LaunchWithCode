@@ -39,12 +39,25 @@
 
 
 <div class= 'container' style='text-align:center';>
-
-<h1>Join the Revolution</h1>
-
-<form method="POST" action=""> {% csrf_token %}
-	{{form.as_p}}
-	<input type='submit' value='Join' class='btn btn-success'/>
+     <h1 style="color: #FAFCFB">Join the Revolution</h1>
+    
+    <div class="col-sm-6 col-sm-offset-3">
+        <form class="horizontal"method="POST" action=""> {% csrf_token %}
+            <div class="form-group form-group-lg">
+            {% if form.email.errors %}
+                {% for err in form.email.errors %}
+            <div class="alert alert-warning" role="alert">{{ err }}</div>
+                {% endfor %}
+            {% endif %}
+<!--        {{form.as_p}}-->
+        <div class="input-group">
+            <input class="form-control" type="email" name="email" placeholder="Your email..."/ >
+            <span class="input-group-btn">
+            <input type='submit' value='Join' class='btn btn-primary btn-lg'/>
+            </span>
+        </div>
+            </div>
+    </div>
 </form>
 </div>
 
